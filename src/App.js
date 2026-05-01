@@ -1,25 +1,21 @@
 import "./App.css";
-import HelloWorld from "./components/HelloWorld";
+import SayMyName from "./components/SayMyName";
+import Pessoa from "./components/Pessoa";
 
 function App() {
-  const name = "Gabriel";
-
-  const newName = name.toUpperCase();
-
-  function sumNumber(a, b) {
-    return a + b;
-  }
-
-  const urlImage = 'https://placehold.co/400'
+  const nome = "Maria";
 
   return (
     <div className="App">
-      <h1>Olá react</h1> 
-      <p>Olá, {newName}</p>
-      <p>Somador: {sumNumber(1, 5)}</p>
-      <img src={urlImage} alt="minha image" />
-
-      <HelloWorld />
+      <SayMyName nome="Lucio" />
+      <SayMyName nome="Gabriel" />
+      <SayMyName nome={nome} />
+      <Pessoa
+        nome="João"
+        idade="28"
+        profissao="Programador"
+        foto="https://placehold.co/150"
+      />
     </div>
   );
 }
